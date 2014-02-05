@@ -12,6 +12,17 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+$("h3").click(doStuff);
+
+function doStuff(event) {
+	event.preventDefault();
+	var curName = $(this).text();
+	console.log(curName);
+	var newName = anagrammedName(curName);
+	console.log(newName);
+	$(this).text(newName);
+}
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
